@@ -11,11 +11,7 @@ RUN rm -rf /var/www/html/index.html
 WORKDIR /var/www/html/
 
 #we are appending static website logic from remote server
-COPY Oxer Free Website Template - Free-CSS.com.zip
-
-#we are running few commands in /var/www/html location
-RUN unzip oxer.zip 
-RUN mv oxer-html/*
+COPY oxer-html /var/www/html
 
 #we are exposing our container to port 80 
 EXPOSE 80
