@@ -11,7 +11,7 @@ RUN rm -rf /var/www/html/index.html
 WORKDIR /var/www/html/
 
 #we are appending static website logic from remote server
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/oxer.zip
+COPY Oxer Free Website Template - Free-CSS.com.zip
 
 #we are running few commands in /var/www/html location
 RUN unzip oxer.zip 
@@ -21,4 +21,4 @@ RUN mv oxer-html/*
 EXPOSE 80
 
 #we are running a background process for our image
-CMD "httpd" "-DFOREGROUND"
+CMD ["apachectl", "-D", "FOREGROUND"]
