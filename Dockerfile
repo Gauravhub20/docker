@@ -1,7 +1,7 @@
 #we are attaching a base to our docker file
 FROM ubuntu:latest
 #we are giving naming and filtering keys and values to our image
-LABEL DEVOPSENGG ="GAURAV"
+LABEL DEVOPSENGG="GAURAV"
 #we are installing few packeges in our image
 RUN apt update
 RUN apt install unzip apache2 -y
@@ -16,5 +16,4 @@ COPY oxer-html /var/www/html
 #we are exposing our container to port 80 
 EXPOSE 80
 
-#we are running a background process for our image
 CMD ["apachectl", "-D", "FOREGROUND"]
