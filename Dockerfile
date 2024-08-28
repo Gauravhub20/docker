@@ -1,7 +1,7 @@
 #we are attaching a base to our docker file
-FROM ubuntu : 20.04
+FROM ubuntu:latest
 #we are giving naming and filtering keys and values to our image
-LABEL DEVOPSENGG ="gaurav"
+LABEL DEVOPSENGG ="GAURAV"
 #we are installing few packeges in our image
 RUN apt update
 RUN apt install unzip apache2 -y
